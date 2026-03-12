@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+body {
+    font-family: "Source Serif 4", serif;
+}
+
+h1 {
+    font-size: 248px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.finance {
+    background-image: url('../../Images/bg-finance.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.development {
+    background-image: url('../../Images/bg-development.png');
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width:660px) {
+
+    h1 {
+        font-size: 188px;
+
+    }
+}

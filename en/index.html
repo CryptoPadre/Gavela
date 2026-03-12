@@ -12,25 +12,145 @@
       name="keywords"
       content="video games, finance, billing audit, billing dispute, customer service, software development, game development, travel consultancy"
     />
-     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-    <title>Gavelon | Billing Audit, Software & Game Development, Travel Consultancy</title>
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <title>
+      Gavelon | Billing Audit, Software & Game Development, Travel Consultancy
+    </title>
   </head>
   <body>
-      <!-- Header -->
+    <!-- Header -->
     <header>
-        <!--Title-->
-        <h1 id="title">Gavela</h1>
-         <nav>
-            <ul id="nav-link">
-                <li><a href="index.html">Home </a></li>
-                <li><a href="finance.html">Finance</a></li>
-                <li><a href="development.html">Development</a></li>
-                <li><a href="../hun/travel.html">Travel</a></li>
-            </ul>
-        </nav>
+      <nav class="navbar fixed-top navbar-expand-lm">
+        <div class="navbar position-absolute top-0 end-0" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="../Images/eng.png"
+                  alt="Bootstrap"
+                  width="30"
+                  height="24"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="../sk/index.html">
+                <img
+                  src="../Images/slovakia.png"
+                  alt="Bootstrap"
+                  width="30"
+                  height="24"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar-brand" href="../hun/index.html">
+                <img
+                  src="../Images/hungary.png"
+                  alt="Bootstrap"
+                  width="30"
+                  height="24"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
+    <main>
+      <h1 id="title">Gavela</h1>
+      <div class="row">
+        <!-- Finance Services -->
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card text-center finance">
+            <div class="card-header text-white">
+              <span class="bg-primary">Finance Services</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">
+                <span class="bg-primary"
+                  >Billing Audit and Dispute Resolution</span
+                >
+              </h5>
+              <p class="card-text text-white">
+                <span class="bg-primary">
+                  Identify discrepancies in your billing, dispute vendor
+                  invoices , and recover revenue.</span
+                >
+              </p>
+              <a href="finance.html" class="btn btn-primary">Find out more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Software & Web Development -->
+        <div class="col-sm-6">
+          <div class="card text-center development">
+            <div class="card-header">
+              <span class="text-black bg-white">Technology Services</span>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <span class="text-black bg-white"
+                  >Software & Web Development</span
+                >
+              </h5>
+              <p class="card-text">
+                <span class="text-black bg-white">
+                  Build 3D games, apps, and websites based on your needs. You
+                  dream it, we deliver it.</span
+                >
+              </p>
+              <a href="development.html" class="btn btn-black bg-white"
+                >Find out more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="fixed-bottom">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-facebook"></i>
+      </div>
+    </footer>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7b140d41c7.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
