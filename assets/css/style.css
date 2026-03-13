@@ -9,6 +9,66 @@ h1 {
     text-align: center;
 }
 
+.title {
+    animation-name: title;
+    height: 200px;
+    animation-duration: 10s;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    font-size: 200px;
+}
+
+@keyframes title {
+    0% {
+        transform: translateX(0px) translateY(-90%);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0%);
+    }
+}
+
+.titleB {
+    height: 200px;
+    animation-name: titleB;
+    animation-duration: 10s;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    font-size: 200px;
+}
+
+@keyframes titleB {
+    0% {
+        transform: translateX(-90%) translateY(0%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
+.titleC {
+    height: 200px;
+    animation-name: titleC;
+    animation-duration: 10s;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    font-size: 200px;
+}
+
+@keyframes titleC {
+    0% {
+        transform: translateX(90%) translateY(0%);
+    }
+
+    100% {
+        transform: translateX(0%) translateY(0%);
+    }
+}
+
 footer {
     text-align: center;
 }
