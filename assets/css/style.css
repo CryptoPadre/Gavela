@@ -6,7 +6,6 @@ body {
 
 /* Main index page */
 .title {
-    color: red;
     animation-name: title;
     height: 200px;
     animation-duration: 10s;
