@@ -1,14 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Meie+Script&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 body {
     font-family: "Source Serif 4", serif;
 }
 
 /* Main index page */
+.welcomepage {
+    overflow: hidden;
+    background-image: url("../../Images/sahara.jpg");
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.quote {
+    color: #7C3AED;
+    font-family: "Poiret One", sans-serif;
+    margin-left: 45%;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    animation-name: quoteAnim;
+    animation-duration: 14s;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes quoteAnim {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .title {
+    color: #2563EB;
     animation-name: title;
     height: 200px;
-    animation-duration: 10s;
+    animation-duration: 8s;
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -17,15 +56,16 @@ body {
 
 @keyframes title {
     0% {
-        transform: translateX(0px) translateY(-90%);
+        transform: translateX(-20%) translateY(-120%);
     }
 
     100% {
-        transform: translateX(0px) translateY(0%);
+        transform: translateX(-20%) translateY(0%);
     }
 }
 
 .titleB {
+    color: #7C3AED;
     height: 200px;
     animation-name: titleB;
     animation-duration: 10s;
@@ -41,11 +81,12 @@ body {
     }
 
     100% {
-        transform: translateX(0%) translateY(0%);
+        transform: translateX(-4%) translateY(0%);
     }
 }
 
 .titleC {
+    color: #F97316;
     height: 200px;
     animation-name: titleC;
     animation-duration: 10s;
@@ -57,11 +98,11 @@ body {
 
 @keyframes titleC {
     0% {
-        transform: translateX(90%) translateY(0%);
+        transform: translateX(90%) translateY(-15%);
     }
 
     100% {
-        transform: translateX(0%) translateY(0%);
+        transform: translateX(10%) translateY(-15%);
     }
 }
 
