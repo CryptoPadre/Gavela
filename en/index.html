@@ -47,50 +47,77 @@
     <!-- Header -->
     <header class="headeren">
       <div class="row">
-         <div class="text-center">
-      <a href="../index.html">
-      <img src="../Images/logo.png" class="img-fluid logo" alt="company logo">
-      </a>
+        <div class="text-center">
+          <a href="../index.html">
+            <img
+              src="../Images/logo.png"
+              class="img-fluid logo"
+              alt="company logo"
+            />
+          </a>
+        </div>
       </div>
     </header>
     <main>
       <!--Flexbox for the content-->
-       <div class="d-flex justify-content-evenly">
+      <div class="d-flex flex-column align-items-center flex-wrap">
         <!--Finance Services-->
-      <div class="card w-75 mb-3">
-  <div class="card-body">
-    <h5 class="card-title">Finance Services</h5>
-    <p class="card-text">Billing Audit and Dispute Resolution</p>
-    <a href="finance.html" class="btn btn-primary">Find out more</a>
-  </div>
-</div>
-<!--Development-->
-<div class="card w-75 mb-3">
-  <div class="card-body">
-    <h5 class="card-title">Software & Web Development</h5>
-    <p class="card-text">Build 3D games, apps, and websites based on your needs. You dream it, I deliver it.</p>
-    <a href="development.html" class="btn btn-primary">Find out more</a>
-  </div>
-</div>
-<div class="card w-75 mb-3">
-  <div class="card-body text-center">
-    <h5 class="card-title">About</h5>
-    <p class="card-text">Meet Gavela</p>
-    <a href="#" class="btn btn-primary">Read more</a>
-  </div>
-</div>
-<div class="card w-75 mb-3">
-  <div class="card-body">
-    <h5 class="card-title">Contact us</h5>
-    <p class="card-text">Send us your request and I will get back to you</p>
-    <a href="#" class="btn btn-primary">Send request</a>
-  </div>
-</div>
-</div>
+        <div class="card w-50 mb-3 text-center finance">
+          <div class="card-body">
+            <h5
+              class="card-title bg-light d-inline-block financetext px-2 py-1"
+            >
+              Finance Services
+            </h5>
+            <br />
+            <p class="card-text bg-light d-inline-block financetext px-2 py-1">
+              Billing Audit and Dispute Resolution
+            </p>
+            <br />
+            <a href="finance.html" class="btn btn-primary">Find out more</a>
+          </div>
+        </div>
+        <!--Development-->
+        <div class="card w-50 mb-3 text-center development">
+          <div class="card-body">
+            <h5
+              class="card-title d-inline-block bg-light developmenttext px-2 py-1"
+            >
+              Software & Web Development
+            </h5>
+            <p
+              class="card-tex d-inline-block bg-light developmenttext px-2 py-1"
+            >
+              Build 3D games, apps, and websites based on your needs. You dream
+              it,and I deliver it.
+            </p>
+            <a href="development.html" class="btn btn-primary">Find out more</a>
+          </div>
+        </div>
+        <!--About-->
+        <div class="card w-50 mb-3 text-center about">
+          <div class="card-body">
+            <h5 class="card-title">About</h5>
+            <p class="card-text">Meet Gavela</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+        <!--Contact form-->
+        <div class="card w-50 mb- text-center contact">
+          <div class="card-body">
+            <h5 class="card-title">Contact us</h5>
+            <p class="card-text">
+              Send us your request and I will get back to you
+            </p>
+            <a href="#" class="btn btn-primary">Send request</a>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
-      <div class="fixed-bottom">
+      <div class="text-center mt-4">
         <i class="fa-brands fa-github"></i>
+
         <i class="fa-brands fa-facebook"></i>
       </div>
     </footer>

@@ -9,7 +9,7 @@ body {
 /* Main index page */
 .welcomepage {
     overflow: hidden;
-    background-image: url("../../Images/bgimage.jpg");
+    background-image: url("../../Images/test8.jpg");
     background-size: cover;
     background-position: fixed;
     background-repeat: no-repeat;
@@ -114,8 +114,8 @@ body {
 }
 
 .headermain {
- height: 50px;
- padding-top: 10px;   
+    height: 50px;
+    padding-top: 10px;
 }
 
 /* Index pages after the language selected */
@@ -150,9 +150,6 @@ h1 {
     height: 300px !important;
 }
 
-footer {
-    text-align: center;
-}
 
 .finance {
     background-image: url('../../Images/bg-finance.png');
@@ -161,15 +158,32 @@ footer {
 
 }
 
+.financetext {
+    color: #2563EB;
+}
+
 .development {
     background-image: url('../../Images/bg-development.png');
     background-position: center;
     background-size: cover;
 }
 
-footer {
-    position: fixed;
+.developmenttext {
+    color: #7C3AED;
 }
+
+.about {
+    background-image: url('../../Images/bg-about.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.contact {
+    background-image: url('../../Images/bg-contact.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
 
 @media screen and (max-width:660px) {
 
