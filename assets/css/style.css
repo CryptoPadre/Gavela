@@ -9,45 +9,18 @@ body {
 /* Main index page */
 .welcomepage {
     overflow: hidden;
-    background-image: url("../../Images/sahara.jpg");
+    background-image: url("../../Images/bgimage.jpg");
     background-size: cover;
     background-position: fixed;
     background-repeat: no-repeat;
-    height: 100vh;
+    
 }
-
-.quote {
-    color: #7C3AED;
-    font-family: "Poiret One", sans-serif;
-    margin-left: 45%;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 20px;
-    animation-name: quoteAnim;
-    animation-duration: 14s;
-    animation-delay: 0ms;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
-
-@keyframes quoteAnim {
-    0% {
-        opacity: 0;
-    }
-    50%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 
 .title {
     color: #2563EB;
     animation-name: title;
     height: 200px;
-    animation-duration: 8s;
+    animation-duration: 12s;
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -56,11 +29,13 @@ body {
 
 @keyframes title {
     0% {
+        opacity: 0;
         transform: translateX(-20%) translateY(-120%);
     }
 
     100% {
-        transform: translateX(-20%) translateY(0%);
+        transform: translateX(-20%) translateY(5%);
+        opacity: 0.8;
     }
 }
 
@@ -68,7 +43,7 @@ body {
     color: #7C3AED;
     height: 200px;
     animation-name: titleB;
-    animation-duration: 10s;
+    animation-duration: 12s;
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -77,11 +52,13 @@ body {
 
 @keyframes titleB {
     0% {
+        opacity: 0;
         transform: translateX(-90%) translateY(0%);
     }
 
     100% {
         transform: translateX(-4%) translateY(0%);
+        opacity: 0.9;
     }
 }
 
@@ -89,7 +66,7 @@ body {
     color: #F97316;
     height: 200px;
     animation-name: titleC;
-    animation-duration: 10s;
+    animation-duration: 14s;
     animation-delay: 0ms;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -99,11 +76,41 @@ body {
 @keyframes titleC {
     0% {
         transform: translateX(90%) translateY(-15%);
+        opacity: 0;
     }
 
     100% {
-        transform: translateX(10%) translateY(-15%);
+        transform: translateX(12%) translateY(-15%);
+        opacity: 1;
     }
+}
+
+.en,
+.hu,
+.sk {
+    width: 55px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.en {
+
+    background-image: url("../../Images/usflag.gif");
+
+}
+
+.hu {
+
+    background-image: url("../../Images/huflag.gif");
+
+}
+
+.sk {
+
+    background-image: url("../../Images/skflag.gif");
+
 }
 
 /* Index pages after the language selected */
@@ -111,6 +118,27 @@ body {
 h1 {
     font-size: 248px;
     text-align: center;
+    
+}
+
+.ga {
+    color: #2563EB;
+}
+
+.ve {
+    color: #7C3AED;
+    opacity: 0.8;
+}
+
+.la {
+    color: #F97316;
+    opacity: 0.6;
+}
+
+img {
+    width: 100px;
+    height: 80px;
+    position: fixed;
 }
 
 footer {
@@ -121,6 +149,7 @@ footer {
     background-image: url('../../Images/bg-finance.png');
     background-position: center;
     background-size: cover;
+   
 }
 
 .development {
