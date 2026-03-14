@@ -40,71 +40,53 @@
     <!-- CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
     <title>
-      Gavelon | Billing Audit, Software & Game Development, Travel Consultancy
+      Gavela | Billing Audit, Software & Game Development, Travel Consultancy
     </title>
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header class="headeren">
+      <div class="row">
+         <div class="text-center">
       <a href="../index.html">
-      <img src="../Images/logo.png" class="rounded float-start" alt="company logo">
+      <img src="../Images/logo.png" class="img-fluid logo" alt="company logo">
       </a>
+      </div>
     </header>
     <main>
-      <div class="d-flex justify-content-center">
-        <h3 class="ga">Ga</h3>
-        <h3 class="ve">Ve</h3>
-        <h3 class="la">La</h3>
-      </div>
-      <div class="row">
-        <!-- Finance Services -->
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card text-center finance">
-            <div class="card-header text-white">
-              <span class="bg-primary">Finance Services</span>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title text-white">
-                <span class="bg-primary"
-                  >Billing Audit and Dispute Resolution</span
-                >
-              </h5>
-              <p class="card-text text-white">
-                <span class="bg-primary">
-                  Identify discrepancies in your billing, dispute vendor
-                  invoices , and recover revenue.</span
-                >
-              </p>
-              <a href="finance.html" class="btn btn-primary">Find out more</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Software & Web Development -->
-        <div class="col-sm-6">
-          <div class="card text-center development">
-            <div class="card-header">
-              <span class="text-black bg-white">Technology Services</span>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <span class="text-black bg-white"
-                  >Software & Web Development</span
-                >
-              </h5>
-              <p class="card-text">
-                <span class="text-black bg-white">
-                  Build 3D games, apps, and websites based on your needs. You
-                  dream it, I deliver it.</span
-                >
-              </p>
-              <a href="development.html" class="btn btn-black bg-white"
-                >Find out more</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+      <!--Flexbox for the content-->
+       <div class="d-flex justify-content-evenly">
+        <!--Finance Services-->
+      <div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Finance Services</h5>
+    <p class="card-text">Billing Audit and Dispute Resolution</p>
+    <a href="finance.html" class="btn btn-primary">Find out more</a>
+  </div>
+</div>
+<!--Development-->
+<div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Software & Web Development</h5>
+    <p class="card-text">Build 3D games, apps, and websites based on your needs. You dream it, I deliver it.</p>
+    <a href="development.html" class="btn btn-primary">Find out more</a>
+  </div>
+</div>
+<div class="card w-75 mb-3">
+  <div class="card-body text-center">
+    <h5 class="card-title">About</h5>
+    <p class="card-text">Meet Gavela</p>
+    <a href="#" class="btn btn-primary">Read more</a>
+  </div>
+</div>
+<div class="card w-75 mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Contact us</h5>
+    <p class="card-text">Send us your request and I will get back to you</p>
+    <a href="#" class="btn btn-primary">Send request</a>
+  </div>
+</div>
+</div>
     </main>
     <footer>
       <div class="fixed-bottom">

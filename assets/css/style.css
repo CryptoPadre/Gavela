@@ -13,7 +13,7 @@ body {
     background-size: cover;
     background-position: fixed;
     background-repeat: no-repeat;
-    
+
 }
 
 .title {
@@ -30,7 +30,7 @@ body {
 @keyframes title {
     0% {
         opacity: 0;
-        transform: translateX(-20%) translateY(-120%);
+        transform: translateX(120%) translateY(5%);
     }
 
     100% {
@@ -113,12 +113,17 @@ body {
 
 }
 
+.headermain {
+ height: 50px;
+ padding-top: 10px;   
+}
+
 /* Index pages after the language selected */
 
 h1 {
     font-size: 248px;
     text-align: center;
-    
+
 }
 
 .ga {
@@ -135,10 +140,14 @@ h1 {
     opacity: 0.6;
 }
 
-img {
-    width: 100px;
-    height: 80px;
-    position: fixed;
+.ga,
+.ve,
+.la {
+    font-size: 180px;
+}
+
+.logo {
+    height: 300px !important;
 }
 
 footer {
@@ -149,13 +158,17 @@ footer {
     background-image: url('../../Images/bg-finance.png');
     background-position: center;
     background-size: cover;
-   
+
 }
 
 .development {
     background-image: url('../../Images/bg-development.png');
     background-position: center;
     background-size: cover;
+}
+
+footer {
+    position: fixed;
 }
 
 @media screen and (max-width:660px) {
