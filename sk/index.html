@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta tags for search engines -->
     <meta
       name="description"
-      content="Gavelon: Jednoosobová firma poskytujúca služby auditu a riešenia sporov fakturácie, vývoj softvéru a hier, a cestovné poradenstvo."
+      content="Gavelon je živnostenská firma poskytujúca audity fakturácie a riešenie sporov, ako aj služby v oblasti softvéru, vývoja hier a cestovného poradenstva."
     />
     <meta
       name="keywords"
-      content="videohry, financie, audit fakturácie, riešenie sporov fakturácie, zákaznícky servis, vývoj softvéru, vývoj hier, cestovné poradenstvo"
+      content="videohry, financie, audit fakturácie, riešenie sporov s fakturáciou, zákaznícka podpora, vývoj softvéru, vývoj hier, cestovné poradenstvo"
     />
     <!-- Favicon -->
     <link
@@ -37,33 +37,98 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+     <!-- CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
     <title>
-      Gavelon | Billing Audit, Software & Game Development, Travel Consultancy
+      Gavelon | Audit fakturácie, vývoj softvéru a hier, cestovné poradenstvo
     </title>
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <!--Title-->
-      <h1 id="title">Gavela</h1>
-      <ul id="nav-link">
-        <li><a href="../en/index.html">Eng </a></li>
-        <li><a href="../hun/index.html">Hun</a></li>
-        <li><a href="index.html">Sk</a></li>
-      </ul>
-      <nav>
-        <ul id="nav-link">
-          <li><a href="index.html">Domovská stránka</a></li>
-          <li><a href="finance.html">Finančné služby</a></li>
-          <li><a href="development.html">Vývoj softvéru</a></li>
-          <li><a href="travel.html">Cestovanie</a></li>
-        </ul>
-      </nav>
+      <header>
+      <div class="row">
+        <div class="text-center">
+          <a href="../index.html">
+            <img
+              src="../Images/logo.png"
+              class="img-fluid logo"
+              alt="logo spoločnosti Gavelon"
+            />
+          </a>
+        </div>
+      </div>
     </header>
+    <main>
+      <!--Flexbox for the content-->
+      <div class="d-flex flex-column align-items-center flex-wrap">
+        <!--Finance Services-->
+        <div class="card w-50 mb-3 text-center finance">
+          <div class="card-body">
+            <h5
+              class="card-title bg-light d-inline-block px-2 py-1"
+            >
+             Finančné služby
+            </h5>
+            <br>
+            <a href="finance.html" class="btn bg-light finbtn">Zistiť viac</a>
+          </div>
+        </div>
+        <!--Development-->
+        <div class="card w-50 mb-3 text-center development">
+          <div class="card-body">
+            <h5
+              class="card-title d-inline-block bg-light px-2 py-1"
+            >
+              Softvér a vývoj webu
+            </h5>
+           <br>
+            <a href="development.html" class="btn bg-light devbtn">Zistiť viac</a>
+          </div>
+        </div>
+        <!--Travel-->
+        <div class="card w-50 mb-3 text-center travel">
+          <div class="card-body">
+            <h5
+              class="card-title d-inline-block bg-light px-2 py-1"
+            >
+             Cestovné poradenstvo
+            </h5>
+           <br>
+            <a href="travel.html" class="btn bg-light travelbtn">Zistiť viac</a>
+          </div>
+        </div>
+        <!--About-->
+        <div class="card w-50 mb-3 text-center about">
+          <div class="card-body">
+            <h5 class="card-title">O Gavelone</h5>
+            <a href="about.html" class="btn bg-light aboutbtn">Čítať ďalej</a>
+          </div>
+        </div>
+        <!--Contact form-->
+        <div class="card w-50 mb- text-center contact">
+          <div class="card-body">
+            <h5 class="card-title contactcard">Kontakt</h5>
+            <a href="contact.html" class="btn bg-light contactbtn">Odoslať správu</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center mt-4">
+         <a href="https://github.com/CryptoPadre" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+
+       <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a> 
+      </div>
+    </footer>
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7b140d41c7.js"
       crossorigin="anonymous"
     ></script>
   </body>

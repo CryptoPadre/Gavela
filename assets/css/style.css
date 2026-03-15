@@ -115,7 +115,7 @@ body {
 
 .en:hover,
 .hu:hover,
-.sk:hover{
+.sk:hover {
     width: 85px;
     height: 60px;
 }
@@ -172,11 +172,6 @@ h1 {
     font-size: 180px;
 }
 
-.logo {
-    
-}
-
-
 .finance {
     background-image: url('../../Images/bg-finance.png');
     background-position: center;
@@ -192,11 +187,18 @@ h1 {
     color: #7C3AED;
 }
 
+.travel {
+    background-image: url('../../Images/bg-travel.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #F97316;
+}
+
 .about {
     background-image: url('../../Images/bg-about.jpg');
     background-position: center;
     background-size: cover;
-    color: #F97316;
+    color: #6c757d;
 }
 
 .contact {
@@ -215,30 +217,37 @@ h1 {
     color: #7C3AED;
 }
 
-.aboutbtn {
+.travelbtn {
     color: #F97316;
 }
 
-.contactbtn {
-     color: #0BBB73;
+.aboutbtn {
+    color: #6c757d;
 }
 
-.contactcard {
-    padding-bottom: 20px;
+.contactbtn {
+    color: #0BBB73;
 }
 
 .finbtn:hover,
 .devbtn:hover,
 .aboutbtn:hover,
-.contactbtn:hover {
+.contactbtn:hover,
+.travelbtn:hover {
     font-size: 35px;
 }
+
 /* font awesome icons */
 i {
     font-size: 35px;
     padding-bottom: 5px;
     padding-right: 5px;
 }
+
+.fa-github {
+    color: black;
+}
+
 /* device screens with max width 660px */
 
 @media screen and (max-width:660px) {
@@ -248,6 +257,7 @@ i {
 
     }
 
+    /* Main page */
     .title,
     .titleB,
     .titleC {
@@ -265,4 +275,21 @@ i {
             opacity: 0.8;
         }
     }
+
+    /* Index page */
+    .card-title {
+        font-size: 15px !important;
+    }
+
+    .finbtn:hover,
+    .devbtn:hover,
+    .aboutbtn:hover,
+    .contactbtn:hover,
+    .travelbtn:hover {
+        font-size: 25px;
+    }
+
+    .logo {
+    padding-left: 15px;
+}
 }

@@ -6,7 +6,7 @@
     <!-- Meta tags for search engines -->
     <meta
       name="description"
-      content="Gavelon: Egyéni vállalkozás, amely számlázási audit és vitakezelés, szoftver- és játékfejlesztés, valamint utazási tanácsadás szolgáltatásokat kínál."
+      content="A Gavelon egyéni vállalkozás, amely számlázási auditot és vitakezelést, valamint szoftver-, játékfejlesztési és utazási tanácsadási szolgáltatásokat kínál."
     />
     <meta
       name="keywords"
@@ -37,33 +37,98 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+     <!-- CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
     <title>
       Gavelon | Billing Audit, Software & Game Development, Travel Consultancy
     </title>
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <!--Title-->
-      <h1 id="title">Gavela</h1>
-      <ul id="nav-link">
-        <li><a href="../en/index.html">Eng </a></li>
-        <li><a href="index.html">Hun</a></li>
-        <li><a href="../sk/index.html">Sk</a></li>
-      </ul>
-      <nav>
-        <ul id="nav-link">
-          <li><a href="index.html">Kezdőlap</a></li>
-          <li><a href="finance.html">Pénzügy</a></li>
-          <li><a href="development.html">Szoftverfejlesztés</a></li>
-          <li><a href="travel.html">Utazás</a></li>
-        </ul>
-      </nav>
+      <header>
+      <div class="row">
+        <div class="text-center">
+          <a href="../index.html">
+            <img
+              src="../Images/logo.png"
+              class="img-fluid logo"
+              alt="cég logója"
+            />
+          </a>
+        </div>
+      </div>
     </header>
+    <main>
+      <!--Flexbox for the content-->
+      <div class="d-flex flex-column align-items-center flex-wrap">
+        <!--Finance Services-->
+        <div class="card w-50 mb-3 text-center finance">
+          <div class="card-body">
+            <h5
+              class="card-title bg-light d-inline-block px-2 py-1"
+            >
+             Pénzügyi szolgáltatások
+            </h5>
+            <br>
+            <a href="finance.html" class="btn bg-light finbtn">Tudj meg többet</a>
+          </div>
+        </div>
+        <!--Development-->
+        <div class="card w-50 mb-3 text-center development">
+          <div class="card-body">
+            <h5
+              class="card-title d-inline-block bg-light px-2 py-1"
+            >
+              Szoftver & Webfejlesztés
+            </h5>
+           <br>
+            <a href="development.html" class="btn bg-light devbtn">Tudj meg többet</a>
+          </div>
+        </div>
+        <!--Travel-->
+        <div class="card w-50 mb-3 text-center travel">
+          <div class="card-body">
+            <h5
+              class="card-title d-inline-block bg-light px-2 py-1"
+            >
+             Utazási tanácsadás
+            </h5>
+           <br>
+            <a href="travel.html" class="btn bg-light travelbtn">Tudj meg többet</a>
+          </div>
+        </div>
+        <!--About-->
+        <div class="card w-50 mb-3 text-center about">
+          <div class="card-body">
+            <h5 class="card-title">A Gaveláról</h5>
+            <a href="about.html" class="btn bg-light aboutbtn">Olvass tovább</a>
+          </div>
+        </div>
+        <!--Contact form-->
+        <div class="card w-50 mb- text-center contact">
+          <div class="card-body">
+            <h5 class="card-title contactcard">Kapcsolat</h5>
+            <a href="contact.html" class="btn bg-light contactbtn">Üzenet küldése</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center mt-4">
+         <a href="https://github.com/CryptoPadre" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+
+       <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></
+      </div>
+    </footer>
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7b140d41c7.js"
       crossorigin="anonymous"
     ></script>
   </body>
