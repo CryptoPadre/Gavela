@@ -113,6 +113,8 @@ body {
     background-size: cover;
 }
 
+.en:hover,
+.hu:hover,
 .sk:hover{
     width: 85px;
     height: 60px;
@@ -143,6 +145,7 @@ body {
 
 /* Index pages after the language selected */
 
+
 h1 {
     font-size: 248px;
     text-align: center;
@@ -170,7 +173,7 @@ h1 {
 }
 
 .logo {
-    height: 300px !important;
+    
 }
 
 
@@ -178,20 +181,14 @@ h1 {
     background-image: url('../../Images/bg-finance.png');
     background-position: center;
     background-size: cover;
-
-}
-
-.financetext {
     color: #2563EB;
+
 }
 
 .development {
     background-image: url('../../Images/bg-development.png');
     background-position: center;
     background-size: cover;
-}
-
-.developmenttext {
     color: #7C3AED;
 }
 
@@ -199,14 +196,49 @@ h1 {
     background-image: url('../../Images/bg-about.jpg');
     background-position: center;
     background-size: cover;
+    color: #F97316;
 }
 
 .contact {
     background-image: url('../../Images/bg-contact.jpg');
     background-position: center;
     background-size: cover;
+    color: #0BBB73;
 }
 
+/* buttons to navigate to services,contact form and about page */
+.finbtn {
+    color: #2563EB;
+}
+
+.devbtn {
+    color: #7C3AED;
+}
+
+.aboutbtn {
+    color: #F97316;
+}
+
+.contactbtn {
+     color: #0BBB73;
+}
+
+.contactcard {
+    padding-bottom: 20px;
+}
+
+.finbtn:hover,
+.devbtn:hover,
+.aboutbtn:hover,
+.contactbtn:hover {
+    font-size: 35px;
+}
+/* font awesome icons */
+i {
+    font-size: 35px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
 /* device screens with max width 660px */
 
 @media screen and (max-width:660px) {
