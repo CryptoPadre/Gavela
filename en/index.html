@@ -46,43 +46,57 @@
   <body>
     <!-- Header -->
     <header>
-      <div class="row">
-        <div class="text-center">
-          <a href="../index.html">
-            <img
-              src="../Images/logo.png"
-              class="img-fluid"
-              alt="company logo"
-            />
-          </a>
-        </div>
-      </div>
+      <!--Navbar-->
+      <nav class="navbar fixed-top navbar-expand-sm bg-body-tertiary">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+              <a class="nav-link" href="finance.html">Finance</a>
+              <a class="nav-link" href="development.html">Development</a>
+              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="contact.html">Contact</a>
+            </div>
+          </div>
+       
+      </nav>
     </header>
-    <main>
+    <main class="main">
       <!--Flexbox for the content-->
       <div class="d-flex flex-column align-items-center flex-wrap">
         <!--Finance Services-->
         <div class="card w-50 mb-3 text-center finance">
           <div class="card-body">
-            <h5
-              class="card-title bg-light d-inline-block px-2 py-1"
-            >
+            <h5 class="card-title bg-light d-inline-block px-2 py-1">
               Finance Services
             </h5>
-            <br>
+            <br />
             <a href="finance.html" class="btn bg-light finbtn">Find out more</a>
           </div>
         </div>
         <!--Development-->
         <div class="card w-50 mb-3 text-center development developmenttext">
           <div class="card-body">
-            <h5
-              class="card-title d-inline-block bg-light px-2 py-1"
-            >
+            <h5 class="card-title d-inline-block bg-light px-2 py-1">
               Software & Web Development
             </h5>
-           <br>
-            <a href="development.html" class="btn bg-light devbtn">Find out more</a>
+            <br />
+            <a href="development.html" class="btn bg-light devbtn"
+              >Find out more</a
+            >
           </div>
         </div>
         <!--About-->
@@ -93,19 +107,28 @@
           </div>
         </div>
         <!--Contact form-->
-        <div class="card w-50 mb- text-center contact">
+        <div class="card w-50 mb-3 text-center contact">
           <div class="card-body">
-            <h5 class="card-title contactcard">Contact us</h5>
-            <a href="contact.html" class="btn bg-light contactbtn">Send request</a>
+            <a href="contact.html" class="btn bg-light contactbtn"
+              >Send request</a
+            >
           </div>
         </div>
       </div>
     </main>
     <footer>
       <div class="text-center mt-4">
-          <a href="https://github.com/CryptoPadre" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a
+          href="https://github.com/CryptoPadre"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          ><i class="fa-brands fa-github"></i
+        ></a>
 
-       <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook"></i>
+        </a>
       </div>
     </footer>
     <!-- Bootstrap -->

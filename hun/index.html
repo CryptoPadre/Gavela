@@ -37,7 +37,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-     <!-- CSS -->
+    <!-- CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
     <title>
       Gavelon | Billing Audit, Software & Game Development, Travel Consultancy
@@ -45,56 +45,84 @@
   </head>
   <body>
     <!-- Header -->
-      <header>
-      <div class="row">
+    <header>
+      <!--Navbar-->
+      <nav class="navbar fixed-top navbar-expand-sm bg-body-tertiary">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Főoldal</a
+              >
+              <a class="nav-link" href="finance.html">Pénzügy</a>
+              <a class="nav-link" href="development.html">Fejlesztés</a>
+              <a class="nav-link" href="about.html">Rólunk</a>
+              <a class="nav-link" href="contact.html">Kapcsolat</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--company logo-->
+      <div class="row logo">
         <div class="text-center">
           <a href="../index.html">
             <img
               src="../Images/logo.png"
-              class="img-fluid logo"
-              alt="cég logója"
+              class="img-fluid"
+              alt="company logo"
             />
           </a>
         </div>
       </div>
-    </header>
-    <main>
       <!--Flexbox for the content-->
       <div class="d-flex flex-column align-items-center flex-wrap">
         <!--Finance Services-->
         <div class="card w-50 mb-3 text-center finance">
           <div class="card-body">
-            <h5
-              class="card-title bg-light d-inline-block px-2 py-1"
-            >
-             Pénzügyi szolgáltatások
+            <h5 class="card-title bg-light d-inline-block px-2 py-1">
+              Pénzügyi szolgáltatások
             </h5>
-            <br>
-            <a href="finance.html" class="btn bg-light finbtn">Tudj meg többet</a>
+            <br />
+            <a href="finance.html" class="btn bg-light finbtn"
+              >Tudj meg többet</a
+            >
           </div>
         </div>
         <!--Development-->
         <div class="card w-50 mb-3 text-center development">
           <div class="card-body">
-            <h5
-              class="card-title d-inline-block bg-light px-2 py-1"
-            >
+            <h5 class="card-title d-inline-block bg-light px-2 py-1">
               Szoftver & Webfejlesztés
             </h5>
-           <br>
-            <a href="development.html" class="btn bg-light devbtn">Tudj meg többet</a>
+            <br />
+            <a href="development.html" class="btn bg-light devbtn"
+              >Tudj meg többet</a
+            >
           </div>
         </div>
         <!--Travel-->
         <div class="card w-50 mb-3 text-center travel">
           <div class="card-body">
-            <h5
-              class="card-title d-inline-block bg-light px-2 py-1"
-            >
-             Utazási tanácsadás
+            <h5 class="card-title d-inline-block bg-light px-2 py-1">
+              Utazási tanácsadás
             </h5>
-           <br>
-            <a href="travel.html" class="btn bg-light travelbtn">Tudj meg többet</a>
+            <br />
+            <a href="travel.html" class="btn bg-light travelbtn"
+              >Tudj meg többet</a
+            >
           </div>
         </div>
         <!--About-->
@@ -107,17 +135,26 @@
         <!--Contact form-->
         <div class="card w-50 mb- text-center contact">
           <div class="card-body">
-            <h5 class="card-title contactcard">Kapcsolat</h5>
-            <a href="contact.html" class="btn bg-light contactbtn">Üzenet küldése</a>
+            <a href="contact.html" class="btn bg-light contactbtn"
+              >Üzenet küldése</a
+            >
           </div>
         </div>
       </div>
     </main>
     <footer>
       <div class="text-center mt-4">
-         <a href="https://github.com/CryptoPadre" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a
+          href="https://github.com/CryptoPadre"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          ><i class="fa-brands fa-github"></i
+        ></a>
 
-       <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
       </div>
     </footer>
     <!-- Bootstrap -->
