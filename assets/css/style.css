@@ -253,6 +253,12 @@ h1 {
     font-size: 35px;
 }
 
+/* Finance page */
+
+.finservices {
+    padding-top: 5%;
+}
+
 /* font awesome icons */
 i {
     font-size: 35px;
