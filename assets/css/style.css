@@ -267,43 +267,56 @@ h1 {
 
 /* Finance page */
 
-.finservices, .devservices {
+.finservices,
+.devservices,
+.aboutpage {
     padding-top: 80px;
     color: #1f2937;
 
 }
 
-.fininfo, .devinfo {
+.fininfo,
+.devinfo,
+.aboutinfo {
     border: 0;
     border-radius: 2px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
 }
 
-.fininfo p, .devinfo p {
+.fininfo p,
+.devinfo p,
+.aboutinfo p {
     margin-bottom: 1rem;
 }
 
-.fininfo p, .devinfo p {
+.fininfo p,
+.devinfo p,
+.aboutinfo p  {
     line-height: 1.6;
 }
 
-.fininfo h2 {
+.fininfo h2,
+.aboutinfo h2  {
     margin-bottom: 1rem;
     color: #2563EB;
 }
 
-.devinfo h2{
-     margin-bottom: 1rem;
-    color:#7C3AED;
+.devinfo h2 {
+    margin-bottom: 1rem;
+    color: #7C3AED;
 }
 
-.fininfo h5, .devinfo h5 {
+.fininfo h5,
+.devinfo h5,
+.aboutinfo h6 {
     margin-bottom: 1.5rem;
     color: #555;
     padding: 2rem;
 }
 
-.fininfo, .devinfo {
+.fininfo,
+.devinfo,
+.aboutinfo {
     background-color: #f8f9fa;
     border-radius: 10px;
 }
