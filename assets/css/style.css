@@ -265,11 +265,12 @@ h1 {
     background-color: #F97316 !important;
 }
 
-/* Finance page */
+/* Finance,Dev,Travel & About  pages, keep them together since the style is very similar */
 
 .finservices,
 .devservices,
-.aboutpage {
+.aboutpage,
+.travelpage {
     padding-top: 80px;
     color: #1f2937;
 
@@ -277,7 +278,8 @@ h1 {
 
 .fininfo,
 .devinfo,
-.aboutinfo {
+.aboutinfo,
+.travelinfo {
     border: 0;
     border-radius: 2px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
@@ -285,18 +287,20 @@ h1 {
 
 .fininfo p,
 .devinfo p,
-.aboutinfo p {
+.aboutinfo p,
+.travelinfo p {
     margin-bottom: 1rem;
 }
 
 .fininfo p,
 .devinfo p,
-.aboutinfo p  {
+.aboutinfo p,
+.travelinfo p {
     line-height: 1.6;
 }
 
 .fininfo h2,
-.aboutinfo h2  {
+.aboutinfo h2 {
     margin-bottom: 1rem;
     color: #2563EB;
 }
@@ -306,17 +310,31 @@ h1 {
     color: #7C3AED;
 }
 
-.fininfo h5,
-.devinfo h5,
+.travelinfo h2,
+.travelinfo h5,
+.travelinfo h6 {
+    margin-bottom: 1rem;
+    color: #F97316;
+}
+
 .aboutinfo h6 {
     margin-bottom: 1.5rem;
     color: #555;
     padding: 2rem;
 }
 
+.devinfo h5 {
+    color: #7C3AED;
+}
+
+.fininfo h5 {
+    color: #2563EB;
+}
+
 .fininfo,
 .devinfo,
-.aboutinfo {
+.aboutinfo,
+.travelinfo {
     background-color: #f8f9fa;
     border-radius: 10px;
 }
