@@ -319,10 +319,6 @@ i {
     color: black;
 }
 
-/* device screens with max width 900px */
-
-@media screen and (max-width:1000px) {}
-
 /* device screens with max width 660px */
 
 @media screen and (max-width:660px) {
@@ -331,6 +327,7 @@ i {
         font-size: 188px;
 
     }
+
 
     /* Main page */
     .title,
