@@ -339,6 +339,12 @@ h1 {
     border-radius: 10px;
 }
 
+/* Contact form */
+
+#contactform {
+    padding-top: 80px;;
+}
+
 /* font awesome icons */
 i {
     font-size: 35px;
@@ -395,5 +401,15 @@ i {
     .logo {
         padding-left: 15px;
     }
+
+    .finservices,
+    .devservices,
+    .aboutpage,
+    .travelpage {
+        padding-top: 100px;
+
+
+    }
+
 
 }
