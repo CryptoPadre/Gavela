@@ -36,6 +36,49 @@
     ></script>
     <!-- CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
+    <title>Contact Form</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "kmmjfK8vrCLMI5r0y",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        const form = document.getElementById("contact-form");
+        const now = new Date();
+        const formattedDate = now.toISOString();
+        document.querySelector('input[name="time"]').value = formattedDate;
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Honeypot check
+            if (form.website.value) {
+              console.log("Spam detected!");
+              return;
+            }
+            const submit = document.getElementById("submit");
+            submit.disabled = true;
+            // these IDs from the previous steps
+            emailjs.sendForm("service_2duf0zp", "template_xirrabg", this).then(
+              () => {
+                console.log("SUCCESS!");
+                window.location.href = "index.html";
+              },
+              (error) => {
+                console.log("FAILED...", error);
+              },
+            );
+          });
+      };
+    </script>
     <title>Page Title</title>
   </head>
   <body>
@@ -66,54 +109,21 @@
         </div>
       </nav>
     </header>
-    <main>
-      <form
-        action="https://formsubmit.co/tamasgavlider@gavela.eu"
-        method="POST"
-        class="needs-validation"
-        id="contactform"
-        novalidate
-      >
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              required
-            />
-            <div class="invalid-feedback">Please enter your name</div>
-          </div>
-          <div class="col-auto">
-            <label for="email" class="form-label">Email address</label>
-            <input
-              type="email"
-              class="form-control mp-3"
-              id="email"
-              name="email"
-              required
-            />
-            <div class="invalid-feedback">
-              Please enter a valid email address
-            </div>
-          </div>
-          <div class="col-auto">
-            <label for="message" class="form-label">Message</label>
-            <textarea
-              class="form-control"
-              id="message"
-              name="message"
-              rows="3"
-              required
-            ></textarea>
-            <div class="invalid-feedback">Please enter your message</div>
-          </div>
-          <button type="submit" class="btn btn-primary col-auto" id="submitBtn">
-            Submit
-          </button>
-        </div>
+    <main class="main">
+      <form id="contact-form">
+        <!-- To simplify the tutorial, the value is static. -->
+        <input type="hidden" name="time" />
+        <label>Name</label>
+        <input type="text" name="name" required />
+        <label>Email</label>
+        <input type="email" name="email" required />
+        <label>Subject</label>
+        <input type="text" name="title" required />
+        <label>Message</label>
+        <!--Honeypot field-->
+        <input type="text" name="website" style="display: none" />
+        <textarea name="message" required></textarea>
+        <input type="submit" value="Send" id="submit" />
       </form>
     </main>
     <footer>
@@ -136,7 +146,5 @@
       src="https://kit.fontawesome.com/7b140d41c7.js"
       crossorigin="anonymous"
     ></script>
-    <!--Form control-->
-    <script src="../assets/js/form.js"></script>
   </body>
 </html>
