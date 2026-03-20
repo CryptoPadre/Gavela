@@ -300,12 +300,13 @@ h1 {
 }
 
 .fininfo h2,
+.fininfo h5,
 .aboutinfo h2 {
     margin-bottom: 1rem;
     color: #2563EB;
 }
 
-.devinfo h2 {
+.devinfo h2, .devinfo h6 {
     margin-bottom: 1rem;
     color: #7C3AED;
 }
@@ -323,13 +324,6 @@ h1 {
     padding: 2rem;
 }
 
-.devinfo h5 {
-    color: #7C3AED;
-}
-
-.fininfo h5 {
-    color: #2563EB;
-}
 
 .fininfo,
 .devinfo,
