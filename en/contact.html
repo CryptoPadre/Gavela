@@ -4,6 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!--Metatags-->
+    <meta
+      name="description"
+      content="Get in touch with Gavela for inquiries, feedback, or support. Fill out our contact form and reach us easily."
+    />
+    <meta
+      name="keywords"
+      content="Gavela, contact, support, inquiry, email, message, feedback"
+    />
+    <meta name="author" content="Gavela" />
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Contact Gavela" />
+    <meta
+      property="og:description"
+      content="Reach out to Gavela via our contact form for any inquiries or support."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gavela.eu/en/contact.html" />
+    <meta
+      property="og:image"
+      content="https://gavela.eu/assets/images/logo.png"
+    />
     <script src="main.js"></script>
     <!-- Favicon -->
     <link
@@ -36,7 +59,7 @@
     ></script>
     <!-- CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
-    <title>Contact Form</title>
+    <title>Contact Us || Gavela</title>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -61,7 +84,6 @@
             event.preventDefault();
             // Honeypot check
             if (form.website.value) {
-              console.log("Spam detected!");
               return;
             }
             const submit = document.getElementById("submit");
@@ -69,7 +91,6 @@
             // these IDs from the previous steps
             emailjs.sendForm("service_2duf0zp", "template_xirrabg", this).then(
               () => {
-                console.log("SUCCESS!");
                 window.location.href = "index.html";
               },
               (error) => {
@@ -79,7 +100,7 @@
           });
       };
     </script>
-    <title>Page Title</title>
+    <title>Gavela Contact Form</title>
   </head>
   <body>
     <header>
@@ -112,18 +133,28 @@
     <main class="main">
       <form id="contact-form">
         <!-- To simplify the tutorial, the value is static. -->
-        <input type="hidden" name="time" />
-        <label>Name</label>
-        <input type="text" name="name" required />
-        <label>Email</label>
-        <input type="email" name="email" required />
-        <label>Subject</label>
-        <input type="text" name="title" required />
-        <label>Message</label>
-        <!--Honeypot field-->
-        <input type="text" name="website" style="display: none" />
-        <textarea name="message" required></textarea>
-        <input type="submit" value="Send" id="submit" />
+        <div
+          class="row g-3 d-flex flex-column mb-3 text-center"
+        >
+          <input type="hidden" name="time" />
+          <label>Name</label>
+          <input type="text" name="name" required />
+
+          <label>Email</label>
+
+          <input type="email" name="email" required />
+
+          <label>Subject</label>
+          <input type="text" name="title" required />
+
+          <label>Message</label>
+          <textarea name="message" required></textarea>
+
+          <!--Honeypot field-->
+          <input type="text" name="website" style="display: none" />
+
+          <input type="submit" value="Send" id="submit" />
+        </div>
       </form>
     </main>
     <footer>

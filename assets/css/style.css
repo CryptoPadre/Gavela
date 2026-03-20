@@ -129,19 +129,19 @@ body {
 
 .en {
 
-    background-image: url("../../Images/usflag.gif");
+    background-image: url("../images/usflag.gif");
 
 }
 
 .hu {
 
-    background-image: url("../../Images/huflag.gif");
+    background-image: url("../images/huflag.gif");
 
 }
 
 .sk {
 
-    background-image: url("../../Images/skflag.gif");
+    background-image: url("../images/skflag.gif");
 
 }
 
@@ -191,7 +191,7 @@ h1 {
 }
 
 .finance {
-    background-image: url('../../Images/bg-finance.png');
+    background-image: url('../images/bg-finance.png');
     background-position: center;
     background-size: cover;
     color: #2563EB;
@@ -199,27 +199,27 @@ h1 {
 }
 
 .development {
-    background-image: url('../../Images/bg-development.png');
+    background-image: url('../images/bg-development.png');
     background-position: center;
     background-size: cover;
     color: #7C3AED;
 }
 
 .travel {
-    background-image: url('../../Images/bg-travel.jpg');
+    background-image: url('../images/bg-travel.jpg');
     background-position: center;
     background-size: cover;
     color: #F97316;
 }
 
 .about {
-    background-image: url('../../Images/bg-about.jpg');
+    background-image: url('../images/bg-about.jpg');
     background-position: center;
     background-size: cover;
 }
 
 .contact {
-    background-image: url('../../Images/bg.jpg');
+    background-image: url('../images/bg.jpg');
     background-position: center;
     background-size: cover;
     color: #2563EB;
