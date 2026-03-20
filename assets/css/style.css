@@ -159,7 +159,7 @@ body {
 }
 
 .main {
-    padding-top: 8%;
+    padding-top: 80px;
 }
 
 
@@ -402,14 +402,6 @@ i {
         padding-left: 15px;
     }
 
-    .finservices,
-    .devservices,
-    .aboutpage,
-    .travelpage {
-        padding-top: 100px;
-
-
-    }
 
 
 }

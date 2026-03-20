@@ -1,12 +1,12 @@
-let form = document.getElementById('contactform');
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactform');
 
-// send inquiry to business email address and avoid multiple submission by disable button 
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-function submitForm(event) {
-    event.preventDefault();
-    let button = document.getElementById('submitBtn');
-    button.disabled = true;
+        const button = document.getElementById('submitBtn');
+        button.disabled = true;
 
-}
-
-form.addEventListener('submit', submitForm);
+        form.submit();
+    });
+});
