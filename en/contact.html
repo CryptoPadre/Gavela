@@ -57,6 +57,13 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       crossorigin="anonymous"
     ></script>
+    <!--Captcha-->
+     <script src="https://www.google.com/recaptcha/api.js"></script>
+      <script>
+   function onSubmit(token) {
+     document.getElementById("contact-form").submit();
+   }
+ </script>
     <!-- CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
     <title>Contact Us || Gavela</title>
@@ -91,7 +98,7 @@
             // these IDs from the previous steps
             emailjs.sendForm("service_2duf0zp", "template_xirrabg", this).then(
               () => {
-                window.location.href = "index.html";
+                window.location.href = "confirmation.html";
               },
               (error) => {
                 console.log("FAILED...", error);
@@ -130,11 +137,11 @@
         </div>
       </nav>
     </header>
-    <main class="main">
-      <form id="contact-form">
+    <main class="main text-center">
+      <form id="contact-form" >
         <!-- To simplify the tutorial, the value is static. -->
         <div
-          class="row g-3 d-flex flex-column mb-3 text-center"
+          class="row g-3 d-inline-flex flex-column"
         >
           <input type="hidden" name="time" />
           <label>Name</label>
@@ -148,12 +155,13 @@
           <input type="text" name="title" required />
 
           <label>Message</label>
-          <textarea name="message" required></textarea>
+          <textarea name="message" required style="min-height: 150px;"></textarea>
 
           <!--Honeypot field-->
           <input type="text" name="website" style="display: none" />
 
-          <input type="submit" value="Send" id="submit" />
+          <input type="submit" value="Send" id="submit" data-callback='onSubmit' 
+        data-action='submit' class="g-recaptcha" data-sitekey="6LccmpEsAAAAAMlnYOIJGRVlKY4MeXP2p0kH0toI" />
         </div>
       </form>
     </main>
