@@ -57,39 +57,46 @@
 
     <title>Contact | Gavela</title>
 
+    
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
       (function () {
-        emailjs.init({
-          publicKey: "kmmjfK8vrCLMI5r0y", // emailJS pk
-        });
+        emailjs.init("kmmjfK8vrCLMI5r0y");
       })();
-
-      function onSubmit(token) {
-        const form = document.getElementById("contact-form");
-
-        if (form.website.value) return;
-
-        emailjs
-          .send("service_2duf0zp", "template_xirrabg", {
-            name: form.name.value,
-            email: form.email.value,
-            title: form.title.value,
-            message: form.message.value,
-            "g-recaptcha-response": token,
-          })
-          .then(() => {
-            window.location.href = "confirmation.html";
-          })
-          .catch((err) => console.log(err));
-      }
 
       window.onload = function () {
         const now = new Date();
         document.querySelector('input[name="time"]').value = now.toISOString();
       };
+
+      function onSubmit(token) {
+        const form = document.getElementById("contact-form");
+
+        if (form.website.value) {
+          console.log("Spam blocked");
+          return;
+        }
+
+        const params = {
+          name: form.name.value,
+          email: form.email.value,
+          title: form.title.value,
+          message: form.message.value,
+          time: form.time.value,
+          "g-recaptcha-response": token,
+        };
+
+        emailjs
+          .send("service_2duf0zp", "template_xirrabg", params)
+          .then(() => {
+            window.location.href = "confirmation.html";
+          })
+          .catch((error) => {
+            console.log("FAILED...", error);
+          });
+      }
     </script>
   </head>
 
@@ -144,14 +151,15 @@
           <input type="text" name="website" style="display: none" />
 
           <!-- reCAPTCHA button -->
-          <div
+          <button
             class="g-recaptcha"
             data-sitekey="6LeRoZEsAAAAALkIYuWM84Rtz53D_9L9_YmgWEpE"
-            ata-callback="onSubmit"
+            data-callback="onSubmit"
+            data-action="submit"
+            id="submit-btn"
           >
-            <br />
-            <input type="submit" value="Submit" />
-          </div>
+            Submit
+          </button>
         </div>
       </form>
     </main>
