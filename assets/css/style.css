@@ -350,6 +350,7 @@ i {
     color: black;
 }
 
+
 /* device screens with max width 660px */
 
 @media screen and (max-width:660px) {

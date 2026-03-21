@@ -57,39 +57,42 @@
 
     <title>Contact | Gavela</title>
 
-    
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+    <!-- reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+      var onloadCallback = function () {
+        alert("grecaptcha is ready!");
+      };
+    </script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async
+      defer
+    ></script>
     <script>
       (function () {
-        emailjs.init("kmmjfK8vrCLMI5r0y");
+        emailjs.init({
+          publicKey: "kmmjfK8vrCLMI5r0y",
+        });
       })();
-
-      window.onload = function () {
-        const now = new Date();
-        document.querySelector('input[name="time"]').value = now.toISOString();
-      };
 
       function onSubmit(token) {
         const form = document.getElementById("contact-form");
 
+        // Honeypot check
         if (form.website.value) {
-          console.log("Spam blocked");
+          console.log("Spam detected");
           return;
         }
 
-        const params = {
-          name: form.name.value,
-          email: form.email.value,
-          title: form.title.value,
-          message: form.message.value,
-          time: form.time.value,
-          "g-recaptcha-response": token,
-        };
+        // Disable button
+        document.querySelector(".g-recaptcha").disabled = true;
 
         emailjs
-          .send("service_2duf0zp", "template_xirrabg", params)
+          .sendForm("service_2duf0zp", "template_xirrabg", form)
           .then(() => {
             window.location.href = "confirmation.html";
           })
@@ -97,6 +100,11 @@
             console.log("FAILED...", error);
           });
       }
+
+      window.onload = function () {
+        const now = new Date();
+        document.querySelector('input[name="time"]').value = now.toISOString();
+      };
     </script>
   </head>
 
@@ -151,15 +159,13 @@
           <input type="text" name="website" style="display: none" />
 
           <!-- reCAPTCHA button -->
-          <button
+
+          <div
             class="g-recaptcha"
             data-sitekey="6LeRoZEsAAAAALkIYuWM84Rtz53D_9L9_YmgWEpE"
-            data-callback="onSubmit"
-            data-action="submit"
-            id="submit-btn"
-          >
-            Submit
-          </button>
+          ></div>
+          <br />
+          <input type="submit" value="Submit" id="submit-btn" />
         </div>
       </form>
     </main>
@@ -169,7 +175,9 @@
         <a href="https://github.com/CryptoPadre" target="_blank" rel="noopener">
           <i class="fa-brands fa-github"></i>
         </a>
-
+        <a href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
         <a href="#">
           <i class="fa-brands fa-facebook"></i>
         </a>
