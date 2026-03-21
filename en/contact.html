@@ -9,10 +9,7 @@
       name="description"
       content="Get in touch with Gavela for inquiries, feedback, or support."
     />
-    <meta
-      name="keywords"
-      content="Gavela, contact, support, inquiry, email"
-    />
+    <meta name="keywords" content="Gavela, contact, support, inquiry, email" />
     <meta name="author" content="Gavela" />
     <meta name="robots" content="index, follow" />
 
@@ -53,9 +50,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CSS -->
     <link href="../assets/css/style.css" rel="stylesheet" />
@@ -65,8 +60,7 @@
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <!-- reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- reCAPTCHA & emailJS-->
 
     <script>
       (function () {
@@ -76,31 +70,32 @@
       })();
 
       function onSubmit(token) {
-        const form = document.getElementById("contact-form");
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
 
-        // Honeypot check
-        if (form.website.value) {
-          console.log("Spam detected");
-          return;
-        }
+            const form = this;
 
-        // Disable button
-        document.querySelector(".g-recaptcha").disabled = true;
+            if (form.website.value) {
+              console.log("Spam detected");
+              return;
+            }
 
-        emailjs
-          .sendForm("service_2duf0zp", "template_xirrabg", form)
-          .then(() => {
-            window.location.href = "confirmation.html";
-          })
-          .catch((error) => {
-            console.log("FAILED...", error);
+            emailjs
+              .sendForm("service_2duf0zp", "template_xirrabg", form)
+              .then(() => {
+                window.location.href = "confirmation.html";
+              })
+              .catch((error) => {
+                console.log("FAILED...", error);
+              });
           });
       }
 
       window.onload = function () {
         const now = new Date();
-        document.querySelector('input[name="time"]').value =
-          now.toISOString();
+        document.querySelector('input[name="time"]').value = now.toISOString();
       };
     </script>
   </head>
@@ -134,7 +129,6 @@
     <main class="main text-center mt-5 pt-5">
       <form id="contact-form">
         <div class="row g-3 d-inline-flex flex-column">
-
           <input type="hidden" name="time" />
 
           <label>Name</label>
@@ -150,34 +144,22 @@
           <textarea
             name="message"
             required
-            style="min-height: 150px;"
+            style="min-height: 150px"
           ></textarea>
 
           <!-- Honeypot -->
-          <input type="text" name="website" style="display:none" />
+          <input type="text" name="website" style="display: none" />
 
           <!-- reCAPTCHA button -->
-          <button
-            type="button"
-            class="g-recaptcha btn btn-primary"
-            data-sitekey="6LeRoZEsAAAAALkIYuWM84Rtz53D_9L9_YmgWEpE"
-            data-callback="onSubmit"
-            data-action="submit"
-          >
-            Send
-          </button>
 
+          <button type="submit">Submit</button>
         </div>
       </form>
     </main>
 
     <footer>
       <div class="text-center mt-4">
-        <a
-          href="https://github.com/CryptoPadre"
-          target="_blank"
-          rel="noopener"
-        >
+        <a href="https://github.com/CryptoPadre" target="_blank" rel="noopener">
           <i class="fa-brands fa-github"></i>
         </a>
 
