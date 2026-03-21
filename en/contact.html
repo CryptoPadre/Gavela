@@ -61,7 +61,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- reCAPTCHA & emailJS-->
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       (function () {
         emailjs.init({
@@ -151,8 +151,12 @@
           <input type="text" name="website" style="display: none" />
 
           <!-- reCAPTCHA button -->
-
-          <button type="submit">Submit</button>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LeRoZEsAAAAALkIYuWM84Rtz53D_9L9_YmgWEpE"
+          ></div>
+          <br />
+          <input type="submit" value="Submit" />
         </div>
       </form>
     </main>
