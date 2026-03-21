@@ -276,10 +276,11 @@ h1 {
 
 }
 
+/* includes the contact form */
 .fininfo,
 .devinfo,
 .aboutinfo,
-.travelinfo {
+.travelinfo, .contact-form {
     border: 0;
     border-radius: 2px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
@@ -339,6 +340,14 @@ h1 {
     padding-top: 80px;;
 }
 
+label {
+      color: #555;
+      padding: 10px;
+}
+
+.form-message{
+    min-height: 150px
+}
 /* font awesome icons */
 i {
     font-size: 35px;
