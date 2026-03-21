@@ -60,37 +60,30 @@
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <!-- reCAPTCHA & emailJS-->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       (function () {
         emailjs.init({
-          publicKey: "kmmjfK8vrCLMI5r0y",
+          publicKey: "kmmjfK8vrCLMI5r0y", // emailJS pk
         });
       })();
 
       function onSubmit(token) {
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (e) {
-            e.preventDefault();
+        const form = document.getElementById("contact-form");
 
-            const form = this;
+        if (form.website.value) return;
 
-            if (form.website.value) {
-              console.log("Spam detected");
-              return;
-            }
-
-            emailjs
-              .sendForm("service_2duf0zp", "template_xirrabg", form)
-              .then(() => {
-                window.location.href = "confirmation.html";
-              })
-              .catch((error) => {
-                console.log("FAILED...", error);
-              });
-          });
+        emailjs
+          .send("service_2duf0zp", "template_xirrabg", {
+            name: form.name.value,
+            email: form.email.value,
+            title: form.title.value,
+            message: form.message.value,
+            "g-recaptcha-response": token,
+          })
+          .then(() => {
+            window.location.href = "confirmation.html";
+          })
+          .catch((err) => console.log(err));
       }
 
       window.onload = function () {
@@ -154,9 +147,11 @@
           <div
             class="g-recaptcha"
             data-sitekey="6LeRoZEsAAAAALkIYuWM84Rtz53D_9L9_YmgWEpE"
-          ></div>
-          <br />
-          <input type="submit" value="Submit" />
+            ata-callback="onSubmit"
+          >
+            <br />
+            <input type="submit" value="Submit" />
+          </div>
         </div>
       </form>
     </main>
