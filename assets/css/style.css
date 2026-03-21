@@ -348,6 +348,15 @@ label {
 .form-message{
     min-height: 150px
 }
+
+/* confirmation */
+
+.confirmation {
+    padding-top: 160px;
+    color: #555;
+    line-height: 1.6;
+}
+
 /* font awesome icons */
 i {
     font-size: 35px;
