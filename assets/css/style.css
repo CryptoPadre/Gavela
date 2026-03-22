@@ -409,10 +409,10 @@ i {
     .logo {
         padding-left: 15px;
     }
-
-    /* contactform */
-    #contact-form {
-        width: 50% !important;
+    /* contact page nav to hide form if navbar not collapsed */
+    .contact-nav{
+        background-color: #f8f9fa !important;
+        width: 20% !important;
     }
 
 }
