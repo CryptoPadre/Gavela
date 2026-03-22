@@ -191,7 +191,7 @@ h1 {
 }
 
 .finance {
-    background-image: url('../images/bg-finance.png');
+    background-image: url('../images/bg-finance.webp');
     background-position: center;
     background-size: cover;
     color: #2563EB;
@@ -199,27 +199,27 @@ h1 {
 }
 
 .development {
-    background-image: url('../images/bg-development.png');
+    background-image: url('../images/bg-development.webp');
     background-position: center;
     background-size: cover;
     color: #7C3AED;
 }
 
 .travel {
-    background-image: url('../images/bg-travel.jpg');
+    background-image: url('../images/bg-travel.webp');
     background-position: center;
     background-size: cover;
     color: #F97316;
 }
 
 .about {
-    background-image: url('../images/bg-about.jpg');
+    background-image: url('../images/bg-about.webp');
     background-position: center;
     background-size: cover;
 }
 
 .contact {
-    background-image: url('../images/bg.jpg');
+    background-image: url('../images/bg.webp');
     background-position: center;
     background-size: cover;
     color: #2563EB;
