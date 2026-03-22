@@ -284,6 +284,8 @@ h1 {
     border: 0;
     border-radius: 2px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
+    background-color: #f8f9fa;
+    border-radius: 10px;
 }
 
 .fininfo p,
@@ -325,14 +327,6 @@ h1 {
     padding: 2rem;
 }
 
-
-.fininfo,
-.devinfo,
-.aboutinfo,
-.travelinfo {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-}
 
 /* Contact form */
 
