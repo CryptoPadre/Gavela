@@ -303,25 +303,25 @@ h1 {
 }
 
 .fininfo h2,
-.fininfo h5,
+.fininfo h3,
 .aboutinfo h2 {
     margin-bottom: 1rem;
     color: #2563EB;
 }
 
-.devinfo h2, .devinfo h6 {
+.devinfo h2, .devinfo h3 {
     margin-bottom: 1rem;
     color: #7C3AED;
 }
 
 .travelinfo h2,
-.travelinfo h5,
-.travelinfo h6 {
+.travelinfo h3,
+.travelinfo h4 {
     margin-bottom: 1rem;
     color: #F97316;
 }
 
-.aboutinfo h6 {
+.aboutinfo h3 {
     margin-bottom: 1.5rem;
     color: #555;
     padding: 2rem;
@@ -330,8 +330,9 @@ h1 {
 
 /* Contact form */
 
-#contactform {
-    padding-top: 80px;;
+#contact-form {
+    padding-top: 80px;
+
 }
 
 label {
@@ -409,6 +410,9 @@ i {
         padding-left: 15px;
     }
 
-
+    /* contactform */
+    #contact-form {
+        width: 50% !important;
+    }
 
 }
