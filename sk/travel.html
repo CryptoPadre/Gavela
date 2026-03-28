@@ -48,28 +48,68 @@
 
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-sm bg-body-tertiary">
+      <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top">
         <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Gavela</a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" href="index.html"
-                >Domov</a
-              >
-              <a class="nav-link" href="finance.html">Financie</a>
-              <a class="nav-link" href="development.html">Vývoj</a>
-              <a class="nav-link active" aria-current="page" href="travel.html">Cestovanie</a>
-              <a class="nav-link" href="about.html">O nás</a>
-              <a class="nav-link" href="contact.html">Kontakt</a>
-            </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="finance.html"
+                  >Financie</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="development.html">Vývoj</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="travel.html">Cestovanie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">O nás</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Kontakt</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Jazyk
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../en/travel.html">
+                      <img src="../assets/images/usflag.gif" alt="English" />
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../hun/tavel.html">
+                      <img src="../assets/images/huflag.gif" alt="Hungarian"
+                    /></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="travel.html">
+                      <img src="../assets/images/skflag.gif" alt="Slovak"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -110,8 +150,8 @@
 
         <p>
           Pri skupinových cestách vás môžem na požiadanie osobne sprevádzať a
-          byť vám k dispozícii počas celej doby, aby bola vaša cesta pohodlná
-          a bez stresu.
+          byť vám k dispozícii počas celej doby, aby bola vaša cesta pohodlná a
+          bez stresu.
         </p>
 
         <a href="contact.html" class="btn bg-light travelbtn">
@@ -120,7 +160,7 @@
       </div>
     </main>
 
-     <footer>
+    <footer>
       <div class="text-center mt-4">
         <a
           href="https://github.com/CryptoPadre"
@@ -136,7 +176,11 @@
           aria-label="LinkedIn"
           ><i class="fa-brands fa-linkedin"></i
         ></a>
-        <a href="https://www.facebook.com/profile.php?id=61578716649051" target="_blank" rel="noopener" aria-label="Facebook"
+        <a
+          href="https://www.facebook.com/profile.php?id=61578716649051"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
           ><i class="fa-brands fa-facebook"></i>
         </a>
       </div>

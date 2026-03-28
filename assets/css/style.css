@@ -152,11 +152,31 @@ body {
 
 /* Index pages after the language selected */
 
+/*Navbar*/
 .navbar {
     background-color: #f8f9fa;
     width: 100%;
     height: 50px;
 }
+
+.navbar-brand {
+    color: #7C3AED;
+}
+
+.navbar-brand:hover {
+    color: #2563EB !important;
+}
+
+.navbar-collapse {
+    background-color: #f8f9fa !important;
+}
+
+img {
+    width: 30px;
+
+}
+
+/*Main*/
 
 .main {
     padding-top: 80px;
@@ -216,6 +236,7 @@ h1 {
     background-image: url('../images/bg-about.webp');
     background-position: center;
     background-size: cover;
+
 }
 
 .contact {
@@ -231,13 +252,13 @@ h1 {
 }
 
 .devbtn,
-.about,
-.aboutbtn,
 .active {
     color: #7C3AED !important;
 }
 
-.travelbtn {
+.travelbtn,
+.about,
+.aboutbtn {
     color: #F97316;
 }
 
@@ -254,13 +275,13 @@ h1 {
     color: white;
 }
 
-.devbtn:hover,
-.aboutbtn:hover {
+.devbtn:hover {
     background-color: #7C3AED !important;
     color: white !important;
 }
 
-.travelbtn:hover {
+.travelbtn:hover,
+.aboutbtn:hover {
     color: white;
     background-color: #F97316 !important;
 }
@@ -280,7 +301,8 @@ h1 {
 .fininfo,
 .devinfo,
 .aboutinfo,
-.travelinfo, .contact-form {
+.travelinfo,
+.contact-form {
     border: 0;
     border-radius: 2px;
     box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
@@ -309,7 +331,8 @@ h1 {
     color: #2563EB;
 }
 
-.devinfo h2, .devinfo h3 {
+.devinfo h2,
+.devinfo h3 {
     margin-bottom: 1rem;
     color: #7C3AED;
 }
@@ -336,11 +359,11 @@ h1 {
 }
 
 label {
-      color: #555;
-      padding: 10px;
+    color: #555;
+    padding: 10px;
 }
 
-.form-message{
+.form-message {
     min-height: 150px
 }
 
@@ -406,11 +429,21 @@ i {
         font-size: 25px;
     }
 
+    .about {
+        background-position: top;
+
+    }
+
+    .about h5 {
+        margin-bottom: 10px;
+    }
+
     .logo {
         padding-left: 15px;
     }
+
     /* contact page nav to hide form if navbar not collapsed */
-    .contact-nav{
+    .contact-nav {
         background-color: #f8f9fa !important;
         width: 20% !important;
     }

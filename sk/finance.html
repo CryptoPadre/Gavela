@@ -44,28 +44,71 @@
   </head>
   <body>
     <header>
-      <nav class="navbar fixed-top navbar-expand-sm bg-body-tertiary">
+      <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top">
         <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Gavela</a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler active"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" href="index.html">Domov</a>
-              <a class="nav-link active" aria-current="page" href="finance.html">Financie</a>
-              <a class="nav-link" href="development.html">Vývoj</a>
-              <a class="nav-link" href="travel.html">Cestovanie</a>
-              <a class="nav-link" href="about.html">O nás</a>
-              <a class="nav-link" href="contact.html">Kontakt</a>
-            </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="finance.html"
+                  >Financie</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="development.html">Vývoj</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="travel.html">Cestovanie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">O nás</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Kontakt</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Jazyk
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../en/finance.html">
+                      <img src="../assets/images/usflag.gif" alt="English" />
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../hun/finance.html">
+                      <img src="../assets/images/huflag.gif" alt="Hungarian"
+                    /></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="finance.html">
+                      <img src="../assets/images/skflag.gif" alt="Slovak"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
