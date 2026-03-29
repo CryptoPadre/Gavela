@@ -56,66 +56,6 @@
     <link href="../assets/css/style.css" rel="stylesheet" />
 
     <title>Contact | Gavela</title>
-
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
-      emailjs.init("kmmjfK8vrCLMI5r0y");
-    </script>
-
-    <!-- Google Invisible reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <script>
-      window.onload = function () {
-        const form = document.getElementById("contact-form");
-        const btn = document.getElementById("submit-btn");
-
-        // Set timestamp
-        form.time.value = new Date().toISOString();
-
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          grecaptcha.execute(); // triggers onSubmit(token)
-        });
-      };
-
-      function onSubmit(token) {
-        const form = document.getElementById("contact-form");
-        const btn = document.getElementById("submit-btn");
-
-        // Honeypot spam check
-        if (form.website.value) {
-          console.log("Spam detected");
-          btn.disabled = false;
-          return;
-        }
-
-        // Disable button while sending
-        btn.disabled = true;
-        btn.value = "Sending...";
-
-        const params = {
-          name: form.name.value,
-          email: form.email.value,
-          title: form.title.value,
-          message: form.message.value,
-          time: form.time.value,
-          "g-recaptcha-response": token,
-        };
-
-        emailjs
-          .send("service_2duf0zp", "template_xirrabg", params)
-          .then(() => {
-            window.location.href = "confirmation.html";
-          })
-          .catch((err) => {
-            console.log("FAILED...", err);
-            btn.disabled = false;
-            btn.value = "Send";
-          });
-      }
-    </script>
   </head>
 
   <body>
@@ -184,43 +124,23 @@
       </nav>
     </header>
 
-    <main class="main text-center mt-5 pt-5">
-      <form id="contact-form" class="contact-form d-inline-block w-75 rounded">
-        <div class="row g-3 d-inline-flex flex-column w-50">
-          <input type="hidden" name="time" />
-
-          <label>Name</label>
-          <input type="text" name="name" required />
-
-          <label>Email</label>
-          <input type="email" name="email" required />
-
-          <label>Subject</label>
-          <input type="text" name="title" required />
-
-          <label>Message</label>
-          <textarea name="message" required class="form-message"></textarea>
-
-          <!-- Honeypot -->
-          <input type="text" name="website" style="display: none" />
-
-          <input
-            type="submit"
-            value="Send"
-            id="submit-btn"
-            class="btn bg-light contactbtn"
-          />
-          <!-- Invisible reCAPTCHA -->
-          <div
-            class="g-recaptcha"
-            data-sitekey="6LeRoZEsAAAAALkIYuWM84Rtz53D_9L9_YmgWEpE"
-            data-callback="onSubmit"
-            data-size="invisible"
-          ></div>
-        </div>
-      </form>
+    <main class="main">
+      <div class="container-sm text-center contact-form w-50 p-3">
+        <p class="mb-1">Tamás Gavlider - Gavela</p>
+        <p class="mb-1">IČO: 57526311</p>
+        <p class="mb-1">Ostrovná 259/1, 92505 Vozokany</p>
+        <p class="mb-1">SZČO</p>
+        <p class="mb-1">Email: tamasgavlider@gavela.eu</p>
+        <p class="mb-1">
+          <a
+            href="mailto:tamasgavlider@gavela.eu?subject=Inquiry"
+            class="btn btn-primary contactbtn"
+          >
+            Send message
+          </a>
+        </p>
+      </div>
     </main>
-
     <footer>
       <div class="text-center mt-4">
         <a
@@ -244,15 +164,6 @@
           aria-label="Facebook"
           ><i class="fa-brands fa-facebook"></i>
         </a>
-      </div>
-      <div class="text-center mt-3 small text-muted">
-        <p class="mb-1">Tamás Gavlider - Gavela</p>
-        <p class="mb-1">IČO: 57526311</p>
-        <p class="mb-1">Ostrovná 259/1, 92505 Vozokany</p>
-        <p class="mb-1">SZČO</p>
-        <p class="mb-1">
-          <a href="mailto:tamasgavlider@gavela.eu">tamasgavlider@gavela.eu</a>
-        </p>
       </div>
     </footer>
 
